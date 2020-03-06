@@ -1,7 +1,7 @@
 const { Router } = require('express');
-const SOAPController = require('../client/Controllers/SOAPController');
+const SOAPController = require('../client/app/controllers/SOAPController');
 
 const routes = Router();
-routes.get('/correio', SOAPController.cep);
+routes.post('/soap', SOAPController.soapWS);
 
 module.exports = routes;
